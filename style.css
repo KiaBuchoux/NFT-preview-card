@@ -1,0 +1,168 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg-blue:hsl(217, 54%, 11%); 
+    --card-bg-blue:hsl(216, 50%, 16%);
+    --line-blue:hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg-blue);
+    font-size: 18px;;
+}
+
+/* ==========
+Typography
+============= */
+
+h1{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.56rem;
+    
+}
+
+
+h1~p,
+.date p,
+.author p {
+    color: var(--soft-blue);
+}
+
+h1~p{
+    
+    font-weight: 300;
+}
+
+.data p,
+.date p{
+    margin-left: 0.5em;
+
+}
+
+.data p {
+    color: var(--cyan);
+    
+}
+
+.name{
+    color: var(--white);
+    
+}
+
+.author p{
+    margin-left: 0.8em;
+}
+
+
+
+/* ==========
+Layout
+============= */
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    padding: 1.6em;
+    margin: 0 auto;
+    max-width: 375px; 
+    background-color: var(--card-bg-blue);
+    border-radius: 20px;
+}
+
+h1,
+h1~p,
+.data-display,
+.author{
+    margin-top: 1.15em;
+}
+
+.img-section{
+    display: block;
+    position: relative;
+
+}
+
+.equilibrium {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.overlay{
+   position: absolute;
+    top: 0;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    background-color: hsl(178, 100%, 50%, 45%);
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.view {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.data-display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.data,
+.date{
+    display: flex;
+}
+
+
+.author{
+    border-top: var(--line-blue) solid 2px;
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    width: 2.5em;
+   background-color: var(--white);
+   border: solid var(--white) 1px;
+   border-radius: 50px;
+}
+
+/* ========
+Hover effect
+=========== */
+
+.overlay,
+h1,
+.name{
+    cursor: pointer;
+}
+
+h1:hover,
+.name:hover{
+    color: var(--cyan);
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+
+
